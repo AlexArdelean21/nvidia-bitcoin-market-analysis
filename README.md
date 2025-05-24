@@ -36,7 +36,7 @@ This Streamlit dashboard explores the potential correlation between **NVIDIA's s
 
 1. **Clone the repo**
    ```bash
-   git clone https://github.com/your-username/nvidia-bitcoin-market-analysis.git
+   git clone https://github.com/AlexArdelean21/nvidia-bitcoin-market-analysis.git
    cd nvidia-bitcoin-market-analysis
    ```
 

@@ -68,6 +68,10 @@ if st.sidebar.button("📊 Correlation & Regression"):
 
 if st.sidebar.button("🧠 Conclusion & Insights"):
     navigate_to("page_3")
+    
+if st.sidebar.button("Surprise"):
+    navigate_to("extra_page")  # or "page_jumpscare" if renamed
+
 
 # Apply CSS to Streamlit buttons AFTER render
 st.sidebar.markdown("""
@@ -110,3 +114,8 @@ if "page" in st.session_state:
         with open("pages/page_3.py", encoding="utf-8") as file:
             code = compile(file.read(), "page_3.py", "exec")
             exec(code, {"st": st, "pd": pd, "StringIO": StringIO})
+
+    elif st.session_state.page == "extra_page":  # or "page_jumpscare"
+        with open("pages/extra_page.py", encoding="utf-8") as file:
+            code = compile(file.read(), "extra_page.py", "exec")
+            exec(code, {"st": st, "time": __import__("time")})
